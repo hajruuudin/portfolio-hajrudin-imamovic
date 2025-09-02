@@ -1,2 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+
+/* Color Pallete */
+@layer base {
+  :root {
+    --text-50: #eae9fc;
+    --text-100: #d6d2f9;
+    --text-200: #ada5f3;
+    --text-300: #8478ed;
+    --text-400: #5b4be7;
+    --text-500: #321fe0;
+    --text-600: #2818b4;
+    --text-700: #1e1287;
+    --text-800: #140c5a;
+    --text-900: #0a062d;
+    --text-950: #050316;
+    
+    --background-50: #ffe7e5;
+    --background-100: #ffcfcc;
+    --background-200: #ffa099;
+    --background-300: #ff7066;
+    --background-400: #ff4133;
+    --background-500: #ff1100;
+    --background-600: #cc0e00;
+    --background-700: #990a00;
+    --background-800: #660700;
+    --background-900: #330300;
+    --background-950: #1a0200;
+    
+    --primary-50: #f9ecec;
+    --primary-100: #f3d8d8;
+    --primary-200: #e6b2b2;
+    --primary-300: #da8b8b;
+    --primary-400: #cd6565;
+    --primary-500: #c13e3e;
+    --primary-600: #9a3232;
+    --primary-700: #742525;
+    --primary-800: #4d1919;
+    --primary-900: #270c0c;
+    --primary-950: #130606;
+    
+    --secondary-50: #e7e5ff;
+    --secondary-100: #cfccff;
+    --secondary-200: #9e99ff;
+    --secondary-300: #6e66ff;
+    --secondary-400: #3d33ff;
+    --secondary-500: #0d00ff;
+    --secondary-600: #0a00cc;
+    --secondary-700: #080099;
+    --secondary-800: #050066;
+    --secondary-900: #030033;
+    --secondary-950: #01001a;
+    
+    --accent-50: #e8f6fc;
+    --accent-100: #d2edf9;
+    --accent-200: #a4dcf4;
+    --accent-300: #77caee;
+    --accent-400: #49b9e9;
+    --accent-500: #1ca7e3;
+    --accent-600: #1686b6;
+    --accent-700: #116488;
+    --accent-800: #0b435b;
+    --accent-900: #06212d;
+    --accent-950: #031117;
+    
+  }
+}
+
+/* Fonts */
+.tasa-explorer-base {
+  font-family: "TASA Explorer", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tasa-explorer-bold {
+  font-family: "TASA Explorer", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}

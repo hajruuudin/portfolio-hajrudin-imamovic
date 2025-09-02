@@ -1,3 +1,9 @@
-<h1 class="text-4xl font-bold">
-  SELAM ALEJK BRACOO
-</h1>
+<section id="sidebar-container" class="bg-(--background-950) w-80 h-screen p-6">
+  <div id="sidebar-inner-container" class="flex flex-col justify-center items-end w-full max-w-6xl h-full">
+    <app-sidebar></app-sidebar>
+  </div>
+</section>
+
+<main id="main-content-outlet" class="bg-black w-full h-screen p-6 flex flex-col justify-start items-stretch text-center">
+  <router-outlet></router-outlet>
+</main>
