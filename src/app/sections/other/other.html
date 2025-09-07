@@ -1,1 +1,44 @@
-<p>other works!</p>
+<app-section-title title="Other Information"></app-section-title>
+
+<section id="other-container-header" class="w-full h-auto py-4 flex flex-col justify-center items-center">
+    <div id="other-container-text" class="max-w-[1366px] w-3/4 h-auto flex flex-row justify-center items-center">
+        <span class="text-center">The following is a collection of other important information that could be of use to
+            better understand me and my work. This includes various certificates I achieved across the years, languages
+            I can speak and work with and other useful links.</span>
+    </div>
+</section>
+
+<section id="other-container-01"
+    class="w-full h-auto py-6 flex flex-col justify-center items-center bg-(--background-800)">
+    <div id="information-text-container-02"
+        class="flex flex-col justify-center items-center max-w-[1366px] w-3/4 h-auto">
+        <app-section-subtitle title="Certificates & Courses"></app-section-subtitle>
+        <div class="w-full flex flex-row justify-center items-center flex-wrap gap-4">
+            <img src="/images/CERTIFICATES/WEBDEV.jpg" alt="Certificate of Completion for a Web Development Course"
+                class="w-72 rounded-2xl" (mouseenter)="setDescription('Web Development Course Completion from Udemy.')"
+                (mouseleave)="resetDescription()">
+
+            <img src="/images/CERTIFICATES/INOVAS.png" alt="Certificate of a Silver Medal in an Engineering Festival"
+                class="w-72 rounded-2xl" (mouseenter)="setDescription('Silver Medal - Engineering Festival')"
+                (mouseleave)="resetDescription()">
+
+            <img src="/images/CERTIFICATES/INOVAZ.png" alt="Certificate of a Gold Medal in an Engineering Festival"
+                class="w-72 rounded-2xl" (mouseenter)="setDescription('Gold Medal - Engineering Festival')"
+                (mouseleave)="resetDescription()">
+        </div>
+        <span class="text-center text-xl md:inline hidden my-2">{{this.currentDescription}}</span>
+    </div>
+</section>
+
+<section id="other-container-02"
+    class="w-full h-auto py-6 flex flex-col justify-center items-center bg-(--background-900) pb-32">
+    <div id="information-text-container-02"
+        class="flex flex-col justify-center items-center max-w-[1366px] w-3/4 h-auto">
+        <app-section-subtitle title="Languages I speak"></app-section-subtitle>
+        <div class="w-full flex flex-row justify-center items-center flex-wrap gap-4">
+            <app-language-icon icon="/images/LANG/BA.png" level="Maternal"></app-language-icon>
+            <app-language-icon icon="/images/LANG/GB.png" level="Fluent"></app-language-icon>
+            <app-language-icon icon="/images/LANG/DE.png" level="A2/B1"></app-language-icon>
+        </div>
+    </div>
+</section>

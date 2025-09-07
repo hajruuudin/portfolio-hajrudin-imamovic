@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { SectionTitle } from "../../components/section-title/section-title";
-import { SectionSubtitle } from "../../components/section-subtitle/section-subtitle";
 import { ProjectAttribute } from "../../components/project-attribute/project-attribute";
 
 @Component({
   selector: 'app-projects',
-  imports: [SectionTitle, SectionSubtitle, ProjectAttribute],
+  imports: [SectionTitle, ProjectAttribute],
   templateUrl: './projects.html',
   styleUrl: './projects.css',
   host: {
