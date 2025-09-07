@@ -1,0 +1,28 @@
+/* #information-container-01{
+    background-image: url(/images/SECTION_FILL/SECTION_FILL_01.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
+#information-container-02{
+    background-image: url(/images/SECTION_FILL/SECTION_FILL_02.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#information-container-03{
+    background-image: url(/images/SECTION_FILL/SECTION_FILL_03.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#information-container-04{
+    background-image: url(/images/SECTION_FILL/SECTION_FILL_04.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
