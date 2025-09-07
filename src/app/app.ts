@@ -1,18 +1,22 @@
 import { Component, signal } from '@angular/core';
+import { Navbar } from "./components/navbar/navbar";
+import { RouterOutlet } from '@angular/router';
+import { Footer } from "./components/footer/footer";
+
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [Navbar, RouterOutlet, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css',
   host: {
-    class: 'flex flex-col justify-start items-stretch'
+    class: 'flex flex-col justify-start items-stretch w-full'
   }
 })
 export class App {
   protected readonly title = signal('portfolio-hajrudin-imamovic');
 
-   private onScroll = () => {
+  private onScroll = () => {
     const scrollY = window.scrollY;
 
     const background = document.getElementById("background");
@@ -21,6 +25,7 @@ export class App {
     const layer3 = document.getElementById("layer_03");
     const layerNav = document.getElementById("layer_nav");
     const headerContainer = document.getElementById("header-container");
+    const navbar = document.getElementById("navbar");
 
     if (background) {
       background.style.transform = `translateY(${scrollY * -0.1}px)`;
@@ -48,6 +53,15 @@ export class App {
       if (opacity < 0) opacity = 0;
       headerContainer.style.opacity = opacity.toString();
     }
+    if (navbar) {
+    if (scrollY > 100) {
+      // user scrolled enough → bring navbar up
+      navbar.style.transform = "translateY(-200%)";
+    } else {
+      // keep it hidden
+      navbar.style.transform = "translateY(100%)";
+    }
+  }
   };
 
   ngOnInit() {
