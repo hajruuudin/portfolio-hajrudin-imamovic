@@ -54,14 +54,21 @@ export class App {
       headerContainer.style.opacity = opacity.toString();
     }
     if (navbar) {
-    if (scrollY > 100) {
-      // user scrolled enough → bring navbar up
-      navbar.style.transform = "translateY(-200%)";
-    } else {
-      // keep it hidden
-      navbar.style.transform = "translateY(100%)";
+      if (scrollY > 100) {
+        // user scrolled enough → bring navbar up
+        navbar.style.transform = "translateY(-200%)";
+      } else {
+        // keep it hidden
+        navbar.style.transform = "translateY(100%)";
+      }
+
+      navbar.addEventListener("click", () => {
+        window.scrollTo({
+          top: 750,
+          behavior: 'smooth'
+        })
+      })
     }
-  }
   };
 
   ngOnInit() {
