@@ -63,10 +63,7 @@ export class App {
       }
 
       navbar.addEventListener("click", () => {
-        window.scrollTo({
-          top: 750,
-          behavior: 'smooth'
-        })
+        headerContainer?.scrollIntoView(true)
       })
     }
   };
