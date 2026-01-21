@@ -1,2 +1,9 @@
-<img [src]="this.icon" alt="Icon" class="w-32">
-<span class="text-xl"><strong>Proficiency: </strong>{{this.level}}</span>
+<div class="flex flex-col items-center gap-3 group">
+    <div class="relative">
+        <img [src]="icon" alt="Language Flag Icon" class="w-24 md:w-32 rounded-xl shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:scale-110">
+        <div class="absolute inset-0 rounded-xl bg-[var(--accent-500)]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    </div>
+    <span class="text-lg md:text-xl text-[var(--text-200)] transition-colors duration-300 group-hover:text-[var(--accent-400)]">
+        <strong class="text-[var(--text-100)]">Proficiency:</strong> {{level}}
+    </span>
+</div>

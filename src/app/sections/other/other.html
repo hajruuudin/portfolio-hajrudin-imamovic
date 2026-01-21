@@ -1,41 +1,72 @@
 <app-section-title title="Other Information"></app-section-title>
 
-<section id="other-container-header" class="w-full h-auto py-4 flex flex-col justify-center items-center">
-    <div id="other-container-text" class="max-w-[1366px] w-3/4 h-auto flex flex-row justify-center items-center">
-        <span class="text-center">The following is a collection of other important information that could be of use to
-            better understand me and my work. This includes various certificates I achieved across the years, languages
-            I can speak and work with and other useful links.</span>
+<section id="other-container-header" class="w-full h-auto py-8 flex flex-col justify-center items-center">
+    <div id="other-container-text" class="max-w-[1366px] w-[90%] md:w-3/4 h-auto flex flex-row justify-center items-center">
+        <p class="text-center text-lg text-[var(--text-200)] leading-relaxed">
+            The following is a collection of other important information that could be of use to
+            better understand me and my work. This includes various <strong class="text-[var(--accent-400)]">certificates</strong> I achieved across the years, <strong class="text-[var(--accent-400)]">languages</strong>
+            I can speak and work with and other useful links.
+        </p>
     </div>
 </section>
 
-<section id="other-container-01"
-    class="w-full h-auto py-6 flex flex-col justify-center items-center bg-(--background-800)">
-    <div id="information-text-container-02"
-        class="flex flex-col justify-center items-center max-w-[1366px] w-3/4 h-auto">
+<section id="other-container-01" class="w-full h-auto py-10 flex flex-col justify-center items-center bg-[var(--background-800)]">
+    <div id="information-text-container-02" class="flex flex-col justify-center items-center max-w-[1366px] w-[90%] md:w-3/4 h-auto">
         <app-section-subtitle title="Certificates & Courses"></app-section-subtitle>
-        <div class="w-full flex flex-row justify-center items-center flex-wrap gap-4">
-            <img src="/images/CERTIFICATES/WEBDEV.jpg" alt="Certificate of Completion for a Web Development Course"
-                class="w-72 rounded-2xl" (mouseenter)="setDescription('Web Development Course Completion from Udemy.')"
-                (mouseleave)="resetDescription()">
+        
+        <div class="w-full flex flex-row justify-center items-center flex-wrap gap-6 mt-4">
+            <div class="group relative">
+                <img 
+                    src="/images/CERTIFICATES/WEBDEV.jpg" 
+                    alt="Certificate of Completion for a Web Development Course"
+                    class="w-72 rounded-2xl shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:scale-[1.02] cursor-pointer"
+                    (mouseenter)="setDescription('Web Development Course Completion from Udemy.')"
+                    (mouseleave)="resetDescription()">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-t from-[var(--background-950)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                    <span class="text-[var(--text-100)] text-sm font-medium md:hidden">Web Development Course</span>
+                </div>
+            </div>
 
-            <img src="/images/CERTIFICATES/INOVAS.png" alt="Certificate of a Silver Medal in an Engineering Festival"
-                class="w-72 rounded-2xl" (mouseenter)="setDescription('Silver Medal - Engineering Festival')"
-                (mouseleave)="resetDescription()">
+            <div class="group relative">
+                <img 
+                    src="/images/CERTIFICATES/INOVAS.png" 
+                    alt="Certificate of a Silver Medal in an Engineering Festival"
+                    class="w-72 rounded-2xl shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:scale-[1.02] cursor-pointer"
+                    (mouseenter)="setDescription('Silver Medal - Engineering Festival')"
+                    (mouseleave)="resetDescription()">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-t from-[var(--background-950)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                    <span class="text-[var(--text-100)] text-sm font-medium md:hidden">Silver Medal 🥈</span>
+                </div>
+            </div>
 
-            <img src="/images/CERTIFICATES/INOVAZ.png" alt="Certificate of a Gold Medal in an Engineering Festival"
-                class="w-72 rounded-2xl" (mouseenter)="setDescription('Gold Medal - Engineering Festival')"
-                (mouseleave)="resetDescription()">
+            <div class="group relative">
+                <img 
+                    src="/images/CERTIFICATES/INOVAZ.png" 
+                    alt="Certificate of a Gold Medal in an Engineering Festival"
+                    class="w-72 rounded-2xl shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:scale-[1.02] cursor-pointer"
+                    (mouseenter)="setDescription('Gold Medal - Engineering Festival')"
+                    (mouseleave)="resetDescription()">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-t from-[var(--background-950)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                    <span class="text-[var(--text-100)] text-sm font-medium md:hidden">Gold Medal 🥇</span>
+                </div>
+            </div>
         </div>
-        <span class="text-center text-xl md:inline hidden my-2">{{this.currentDescription}}</span>
+        
+        <div class="h-8 mt-6 hidden md:flex items-center justify-center">
+            <span class="text-center text-xl text-[var(--accent-400)] transition-all duration-300" 
+                  [class.opacity-100]="currentDescription" 
+                  [class.opacity-0]="!currentDescription">
+                {{currentDescription || '&nbsp;'}}
+            </span>
+        </div>
     </div>
 </section>
 
-<section id="other-container-02"
-    class="w-full h-auto py-6 flex flex-col justify-center items-center bg-(--background-900) pb-32">
-    <div id="information-text-container-02"
-        class="flex flex-col justify-center items-center max-w-[1366px] w-3/4 h-auto">
+<section id="other-container-02" class="w-full h-auto py-10 flex flex-col justify-center items-center bg-[var(--background-950)] pb-32">
+    <div id="information-text-container-02" class="flex flex-col justify-center items-center max-w-[1366px] w-[90%] md:w-3/4 h-auto">
         <app-section-subtitle title="Languages I speak"></app-section-subtitle>
-        <div class="w-full flex flex-row justify-center items-center flex-wrap gap-4">
+        
+        <div class="w-full flex flex-row justify-center items-center flex-wrap gap-8 mt-6">
             <app-language-icon icon="/images/LANG/BA.png" level="Maternal"></app-language-icon>
             <app-language-icon icon="/images/LANG/GB.png" level="Fluent"></app-language-icon>
             <app-language-icon icon="/images/LANG/DE.png" level="A2/B1"></app-language-icon>

@@ -142,3 +142,146 @@
   font-weight: 800;
   font-style: normal;
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-800);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-600);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-500);
+}
+
+/* Smooth scrolling globally */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Glass morphism utility */
+.glass-card {
+  background: rgba(18, 33, 33, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-400) 0%, var(--primary-400) 50%, var(--secondary-400) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated underline for headings */
+.animated-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-500), var(--primary-500));
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.animated-underline:hover::after {
+  width: 100%;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(43, 209, 212, 0.1);
+}
+
+/* Glow effect for icons */
+.icon-glow {
+  filter: brightness(1);
+  transition: all 0.3s ease;
+}
+
+.icon-glow:hover {
+  filter: brightness(1.2) drop-shadow(0 0 10px rgba(43, 209, 212, 0.5));
+  transform: scale(1.1);
+}
+
+/* White icon filter */
+.icon-white {
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.icon-white:hover {
+  opacity: 1;
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+  transform: scale(1.15);
+}
+
+/* Horizontal scroll container styling */
+.scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-600) var(--background-800);
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Stagger animation delay utility */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+
+/* Pulse glow animation for accent elements */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(43, 209, 212, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(43, 209, 212, 0.5), 0 0 30px rgba(43, 209, 212, 0.2);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
